@@ -5,7 +5,8 @@
         <text class="date">{{ nowDate }}</text>
         <text class="weeky">{{ weeky }}</text>
       </view>
-      <Card></Card>
+      <Card />
+      <Card />
       <AtButton>按钮文案</AtButton>
     </view>
   </view>

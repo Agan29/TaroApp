@@ -1,12 +1,15 @@
 $card-padding: 24px 32px;
 .card-wrap {
-  height: 600px;
+  height: 640px;
   background-color: #ddd;
   border-radius: 32px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   position: relative;
   padding: $card-padding;
   overflow: hidden;
+  & + .card-wrap {
+    margin-top: 48px;
+  }
   .card-bg {
     height: 100%;
     position: absolute;
@@ -36,11 +39,13 @@ $card-padding: 24px 32px;
     &.bottom {
       left: 0;
       bottom: 0;
-      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.685);
       color: #fff;
       width: 100%;
       height: 30%;
       padding: $card-padding;
+      // TODO: 背景模糊问题
+      backdrop-filter: blur(30px);
     }
   }
 }
