@@ -1,0 +1,46 @@
+$card-padding: 24px 32px;
+.card-wrap {
+  height: 600px;
+  background-color: #ddd;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: $card-padding;
+  overflow: hidden;
+  .card-bg {
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+  .card-text {
+    position: absolute;
+    z-index: 2;
+    .card-des {
+      display: block;
+      font-size: 28px;
+      opacity: 0.5;
+      color: $black-color;
+    }
+    .card-title {
+      display: block;
+      font-size: 48px;
+      font-weight: bold;
+      color: $black-color;
+    }
+    &.top {
+      left: 32px;
+      top: 24px;
+    }
+    &.bottom {
+      left: 0;
+      bottom: 0;
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+      height: 30%;
+      padding: $card-padding;
+    }
+  }
+}
