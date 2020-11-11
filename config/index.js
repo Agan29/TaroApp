@@ -63,7 +63,7 @@ const config = {
         }
       }
     },
-    esnextModules: ['taro-ui-vue']
+    esnextModules: ['taro-ui-vue3']
   },
   alias: {
     '@/components': getPath('src/components'),

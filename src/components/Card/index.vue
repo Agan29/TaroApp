@@ -1,8 +1,8 @@
 <template>
   <view class="card-wrap">
     <view class="card-text" :class="textPosition">
-      <text class="card-des">des</text>
-      <text class="card-title">title</text>
+      <text class="card-des" v-if="des">{{ des }}</text>
+      <text class="card-title" v-if="title">{{ title }}</text>
     </view>
     <view class="card-bg">
       <image
@@ -12,18 +12,27 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
 import './index.scss'
-import { reactive, toRefs, watch } from 'vue'
-export default {
+import { defineComponent } from 'vue'
+// import { reactive, toRefs, watch } from 'vue'
+
+export default defineComponent({
   name: 'Card',
   components: {},
   props: {
-    textPosition: { type: String, default: 'bottom' }
-  },
-  setup(props, context) {
-    return {}
+    textPosition: { type: String, default: 'top' },
+    des: { type: String },
+    title: { type: String, required: true }
   }
-}
+  // setup(props, context) {
+  //   console.log(props, context)
+  //   const { des = '', title = '' } = props
+  //   return {
+  //     des,
+  //     title
+  //   }
+  // }
+})
 </script>
 

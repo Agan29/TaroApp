@@ -46,6 +46,12 @@ $card-padding: 24px 32px;
       padding: $card-padding;
       // TODO: 背景模糊问题
       backdrop-filter: blur(30px);
+      .card-des {
+        color: #fff;
+      }
+      .card-title {
+        color: #fff;
+      }
     }
   }
 }
